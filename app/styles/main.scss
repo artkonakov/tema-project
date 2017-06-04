@@ -1,0 +1,135 @@
+@import "var.scss";
+body {
+    color: $default-color;
+    background: $default-gray;
+    font-family: 'Open Sans', sans-serif;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+//Карточка на главной странице
+.offer {
+    background: $defalut-light;
+    height: 310px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    position: relative;
+    //Категория
+    .offer__category {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        a {
+            color: $default-color;
+            &:hover {
+                color: $default-color;
+                text-decoration: none;
+            }
+            &:focus {
+                color: $default-color;
+                text-decoration: none;
+            }
+        }
+        p {
+            padding: 8px 0px;
+            margin: 0px 0px;
+            line-height: 1;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            //Цвета категорий
+            &.pink {
+                color: $pink;
+                &:hover {
+                    color: $dark-pink;
+                }
+            }
+        }
+    }
+    //Клиент
+    .offer__client {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        a {
+            color: $gray-color;
+            &:hover {
+                color: $default-color;
+                text-decoration: none;
+            }
+            &:focus {
+                color: $default-color;
+                text-decoration: none;
+            }
+        }
+        p {
+            padding: 8px 0px;
+            margin: 0px 0px;
+            text-align: right;
+            line-height: 1;
+            font-size: 12px;
+            font-weight: 600;
+            &:hover {
+                color: $default-color;
+            }
+        }
+    }
+    //Изображение 
+    .offer__image {
+        padding-top: 40px;
+        img {
+            width: 100%;
+        }
+    }
+    //Заголовок
+    .offer__header {
+        padding: 16px 16px;
+        height: 90px;
+        overflow: hidden;
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+            font-size: 16px;
+            font-weight: 400;
+            color: $default-color;
+            &:hover {
+                color: $default-color-dark;
+            }
+        }
+    }
+    //Время
+    .offer__time {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        p {
+            color: $gray-color;
+            padding: 8px 0px;
+            margin: 0px 0px;
+            text-align: right;
+            line-height: 1;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+    //Сохранить акцию
+    .offer__add {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+           padding: 8px 8px; 
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 " ng-repeat="i in [1,2,3,4]">
+            <div class="offer">
+                <div class="offer__category">
+                    <a href="/">
+                        <p class="pink">Красота</p>
+                    </a>
+                </div>
+                <div class="offer__client">
+                    <a href="/">
+                        <p>Апельсин</p>
+                    </a>
+                </div>
+                <div class="offer__image">
+                    <a href="/"><img src="/images/image.png" alt="" title=""></a>
+                </div>
+                <div class="offer__header">
+                    <a href="">
+                        <h1>-20% на любую стрижку, укладку, маникюр, педикюр и еще какое-то описание в четыре строки, не больше...</h1>
+                    </a>
+                </div>
+                <div class="offer__time">
+                    <p>до 23 июня 2017 23:59</p>
+                </div>
+                <div class="offer__add">
+                    <img src="/images/addto.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <form ng-submit="senditem()">
+            <input type="text" ng-model="itemname">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <span ng-show="user">
+  {{ user }} | <a href="#" ng-click="authObj.$signOut()">Sign out</a>
+</span>
+
+    <div class="row marketing">
+        <p ng-repeat="item in data">{{ item.foo }} {{ item.name }} {{firebaseUser.uid}}</p>
+    </div>
+</div>

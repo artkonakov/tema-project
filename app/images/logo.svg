@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-690 459)">
+<g id="logo">
+<g id="Rectangle 10">
+<use xlink:href="#path0_fill" transform="translate(690 -459)" fill="#56CCF2"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 2C 0 0.895431 0.895431 0 2 0L 30 0C 31.1046 0 32 0.895431 32 2L 32 30C 32 31.1046 31.1046 32 30 32L 2 32C 0.895431 32 0 31.1046 0 30L 0 2Z"/>
+</defs>
+</svg>

@@ -1,135 +1,277 @@
-@import "var.scss";
-body {
-    color: $default-color;
-    background: $default-gray;
-    font-family: 'Open Sans', sans-serif;
-    a {
-        &:hover {
-            text-decoration: none;
-        }
-        &:focus {
-            text-decoration: none;
-        }
-    }
-}
-
-//Карточка на главной странице
-.offer {
-    background: $defalut-light;
-    height: 310px;
-    margin-bottom: 30px;
-    border-radius: 2px;
-    position: relative;
-    //Категория
-    .offer__category {
-        position: absolute;
-        top: 8px;
-        left: 16px;
+    @import "var.scss";
+    body {
+        color: $default-color;
+        background: $default-gray;
+        font-family: 'Open Sans', sans-serif;
         a {
-            color: $default-color;
             &:hover {
-                color: $default-color;
                 text-decoration: none;
             }
             &:focus {
-                color: $default-color;
                 text-decoration: none;
             }
         }
-        p {
-            padding: 8px 0px;
-            margin: 0px 0px;
-            line-height: 1;
-            font-size: 12px;
-            letter-spacing: 1px;
-            font-weight: 600;
-            text-transform: uppercase;
-            //Цвета категорий
-            &.pink {
-                color: $pink;
-                &:hover {
-                    color: $dark-pink;
+    }
+    
+    //Горизонтальный скролл
+    .horizontal-scroll {
+        width: auto;
+        height: 340px;
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        .hor__item {
+            width: 220px;
+            display: inline-block;
+            margin-right: 16px;
+        }
+    }
+    
+    //Горизонтальная саб-навигация
+    .sub-nav {
+        background: $primary-color;
+        .horizontal-nav {
+            width: auto;
+            height: auto;
+            margin-left: -15px;
+            margin-right: -15px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            ul {
+                margin-bottom: 0;
+                margin-left: -20px;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    line-height: 40px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    color: $default-light;
+                    &:hover {
+                        background: $primary-color-hover;
+                    }
+                    &.active {
+                        background: $primary-color-hover;
+                        color: $default-light;
+                    }
                 }
             }
         }
     }
-    //Клиент
-    .offer__client {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        a {
-            color: $gray-color;
-            &:hover {
+    
+    //Карточка на главной странице
+    .offer {
+        background: $default-light;
+        height: 310px;
+        margin-bottom: 30px;
+        border-radius: 2px;
+        position: relative;
+        //Категория
+        .offer__category {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            a {
                 color: $default-color;
-                text-decoration: none;
+                &:hover {
+                    color: $default-color;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: $default-color;
+                    text-decoration: none;
+                }
             }
-            &:focus {
-                color: $default-color;
-                text-decoration: none;
+            p {
+                padding: 8px 0px;
+                margin: 0px 0px;
+                line-height: 1;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-weight: 600;
+                text-transform: uppercase;
+                //Цвета категорий
+                &.pink {
+                    color: $pink;
+                    &:hover {
+                        color: $dark-pink;
+                    }
+                }
             }
         }
-        p {
-            padding: 8px 0px;
-            margin: 0px 0px;
-            text-align: right;
-            line-height: 1;
-            font-size: 12px;
+        //Клиент
+        .offer__client {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            a {
+                color: $gray-color;
+                &:hover {
+                    color: $default-color;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: $default-color;
+                    text-decoration: none;
+                }
+            }
+            p {
+                padding: 8px 0px;
+                margin: 0px 0px;
+                text-align: right;
+                line-height: 1;
+                font-size: 12px;
+                font-weight: 600;
+                &:hover {
+                    color: $default-color;
+                }
+            }
+        }
+        //Изображение 
+        .offer__image {
+            padding-top: 40px;
+            img {
+                width: 100%;
+            }
+        }
+        //Промо плашки
+        .offer__image__promo {
+            position: absolute;
+            top: 48px;
+            left: 8px;
+            a {
+                color: $default-color;
+                &:hover {
+                    color: $default-color;
+                    text-decoration: none;
+                }
+                &:focus {
+                    color: $default-color;
+                    text-decoration: none;
+                }
+            }
+            p {
+                padding: 4px 8px;
+                background: $main-promo;
+                border-radius: 2px;
+                line-height: 1;
+                margin: 0px;
+                color: $default-light;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 600;
+                font-size: 12px;
+                &:hover {
+                    background: $main-promo-hover;
+                }
+                &:active {
+                    background: $main-promo-hover;
+                }
+            }
+        }
+        //Заголовок
+        .offer__header {
+            padding: 8px 16px;
+            a {
+                white-space: normal;
+                margin: 0;
+                padding: 0;
+                line-height: 1.2;
+                font-size: 16px;
+                font-weight: 400;
+                color: $default-color;
+                &:hover {
+                    color: $default-color-dark;
+                }
+            }
+        }
+        //Время
+        .offer__time {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            p {
+                color: $gray-color;
+                padding: 8px 0px;
+                margin: 0px 0px;
+                text-align: right;
+                line-height: 1;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        //Сохранить акцию
+        .offer__add {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 14px;
+            height: 14px;
+            background: url('/images/add-to.svg') no-repeat;
+            background-position: right top;
+            background-size: cover;
+            &:hover {
+                cursor: pointer;
+                background: url('/images/add-to.svg') no-repeat;
+                background-position: center top;
+            }
+            &.active {
+                background: url('/images/add-to.svg') no-repeat;
+                background-position: left top;
+            }
+        }
+    }
+    
+    //Навигация
+    .navigation {
+        background: $default-light;
+        margin-bottom: 0px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $sub-gray-color;
+        .logo {
+            img {
+                width: 32px;
+                height: 32px;
+                margin: 0;
+            }
+        }
+        .main-nav {
+            margin-bottom: 0;
+            margin-top: 6px;
+            li {
+                padding: 0px 12px;
+                font-size: 14px;
+                font-weight: 600;
+                color: $default-color;
+                a {
+                    color: $default-color;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    &.active {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .profile {
+            margin-bottom: 0;
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    
+    //Заголовки главной страницы
+    .main-header {
+        h2 {
+            font-size: 24px;
             font-weight: 600;
-            &:hover {
-                color: $default-color;
-            }
+            margin-bottom: 16px;
         }
     }
-    //Изображение 
-    .offer__image {
-        padding-top: 40px;
-        img {
-            width: 100%;
-        }
-    }
-    //Заголовок
-    .offer__header {
-        padding: 16px 16px;
-        height: 90px;
-        overflow: hidden;
-        h1 {
-            margin: 0;
-            padding: 0;
-            line-height: 1.2;
-            font-size: 16px;
-            font-weight: 400;
-            color: $default-color;
-            &:hover {
-                color: $default-color-dark;
-            }
-        }
-    }
-    //Время
-    .offer__time {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        p {
-            color: $gray-color;
-            padding: 8px 0px;
-            margin: 0px 0px;
-            text-align: right;
-            line-height: 1;
-            font-size: 12px;
-            font-weight: 400;
-        }
-    }
-    //Сохранить акцию
-    .offer__add {
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        &:hover {
-          cursor: pointer;
-        }
-        img {
-           padding: 8px 8px; 
-        }
-    }
-}

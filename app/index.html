@@ -24,32 +24,64 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
+    <div class="container-fluid navigation">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="logo" href="/"><img src="/images/logo.svg"></a>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-inline main-nav">
+                    <li><a href="/" class="active">Новинки</a></li>
+                    <li><a href="/">Популярные</a></li>
+                    <li><a href="/">Скоро истекают</a></li>
+                    <li><a href="/">Магазины</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="list-inline profile pull-right">
 
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-                    <a class="navbar-brand" href="#/">resdok</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#/">Home</a></li>
-                        <li><a ng-href="#/about">About</a></li>
-                        <li><a ng-href="#/">Contact</a></li>
+                    <li class="">
+                        <a href="/"><img class="profile" src="/images/profile.svg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sub-nav">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="horizontal-nav">
+                    <ul>
+                        <a href="/">
+                            <li class="active">Продукты</li>
+                        </a>
+                        <a href="/">
+                            <li>Красота</li>
+                        </a>
+                        <a href="/">
+                            <li>Промтовары</li>
+                        </a>
+                        <a href="/">
+                            <li>Услуги</li>
+                        </a>
+                        <a href="/">
+                            <li>Развлечения</li>
+                        </a>
+                        <a href="/">
+                            <li>Еда на вынос</li>
+                        </a>
+                        <a href="/">
+                            <li>E-shop</li>
+                        </a>
+                        <a href="/">
+                            <li>Телеком</li>
+                        </a>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <div ng-view=""></div>
@@ -81,9 +113,9 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/main.js"></script>
+    <script src="/scripts/controllers/about.js"></script>
     <!-- endbuild -->
     <script>
         // Initialize Firebase
